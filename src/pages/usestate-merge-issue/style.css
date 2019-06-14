@@ -1,0 +1,51 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: #e4002b;
+  height: 80vh;
+}
+
+header {
+  background-color: #fe5000;
+  padding: 5px;
+  font-size: 0.7em;
+  color: lightgrey;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  padding:4px;
+  margin:0;
+}
+
+.row {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  margin: 5px;
+}
+.fields {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width:100%;
+  text-align: center;
+  color: grey
+}
