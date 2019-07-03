@@ -1,4 +1,5 @@
 import React, { useReducer, useState } from 'react';
+import './style.css';
 
 const defaultState = { counter: 0, someothervalues: "test" };
 

@@ -1,8 +1,9 @@
 import React, { useReducer, useState, useContext } from 'react';
+import './style.css';
 
 const ThemeContext = React.createContext();
-const defaultState = { counter: 0, someothervalues: "test" };
 
+const defaultState = { counter: 0, someothervalues: "test" };
 
 function reducer(oldState, newState) {
   return {
@@ -29,6 +30,13 @@ const ThemeProvider = ({ children }) => {
   );
 }
 
+function Footer() {
+  const theme = useContext(ThemeContext);
+  return (
+    <footer className={theme}>useContext demo</footer>
+  );
+}
+
 function Counter() {
   const [state, setState] = useReducer(reducer, defaultState);
   const [value, reset] = useState(0);
@@ -39,10 +47,10 @@ function Counter() {
   }
 
   return (
-    <div className={`example ${theme}`}>
+    <div className={`app ${theme}`}>
       <h1>useContext </h1>
       <h1>{state.counter}</h1>
-      <input type="number" value={value} onChange={handleChange} placeholder="enter initial counter value and press reset" />
+      <input style={{ width: "20%", textAlign: "center" }} type="number" value={value} onChange={handleChange} placeholder="enter initial counter value and press reset" />
       <div className="buttons">
         <button onClick={() => setState({ counter: state.counter + 1 })}>+</button>
         <button onClick={() => setState({ counter: state.counter - 1 })}>-</button>
@@ -54,13 +62,7 @@ function Counter() {
   );
 }
 
-function Footer() {
-  const theme = useContext(ThemeContext);
-  return (
-    <footer className={theme}>useContext demo</footer>
-  );
-}
-export default function ContextDemo() {
+export default function App() {
   return (
     <ThemeProvider>
       <Counter />
@@ -68,5 +70,3 @@ export default function ContextDemo() {
     </ThemeProvider>
   );
 }
-
-

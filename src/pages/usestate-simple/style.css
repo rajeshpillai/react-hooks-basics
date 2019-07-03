@@ -17,6 +17,8 @@
   width: 200px;
 }
 .product {
+  display: inline-block;
+  margin-top: 10px;
   font-size: 4em;
 }
 
@@ -33,12 +35,14 @@
 
 .error {
   font-family: 'Niconne', cursive;
-  width: 250px;
+  width: 150px;
+  height: 50px;
   text-align: center;
   animation: slideInUp 1s; 
-  position: absolute; 
-  top: 15%; 
-  font-size: 1.4em;
+  position: relative; 
+  top: 40%;
+  left: 40%;
+  font-size: 0.9em;
   padding: 10px;
   background-color: #fe5000;
 }
