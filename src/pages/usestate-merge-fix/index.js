@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import './style.css';
-
+import React, { useState } from "react";
+import "./style.css";
 
 export default function Example() {
-  const [user, setUser] = useState({ username: 'rajesh', password: 'guess' });
+  const [user, setUser] = useState({ username: "rajesh", password: "guess" });
 
   function handleChange(e) {
     setUser({
@@ -16,24 +15,35 @@ export default function Example() {
     <div className="app">
       <header>
         <h1>useState with Object(property merge issue) </h1>
-        <h2>FIX: for property merge issue</h2>
+        <h3>FIX: for property merge issue</h3>
       </header>
 
       <div className="info">
         <h2>{user.username}</h2>
+        <hr />
         <h2>{user.password}</h2>
       </div>
 
       <div className="row">
         <div className="fields">
           <label>Username</label>
-          <input type="text" name="username" onChange={handleChange} placeholder="enter username" />
+          <input
+            type="text"
+            name="username"
+            onChange={handleChange}
+            placeholder="enter username"
+          />
         </div>
       </div>
       <div className="row">
         <div className="fields">
           <label>Password</label>
-          <input type="text" name="password" onChange={handleChange} placeholder="enter password" />
+          <input
+            type="text"
+            name="password"
+            onChange={handleChange}
+            placeholder="enter password"
+          />
         </div>
       </div>
       <footer>
@@ -42,5 +52,3 @@ export default function Example() {
     </div>
   );
 }
-
-
